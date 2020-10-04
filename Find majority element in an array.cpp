@@ -96,3 +96,44 @@ int main()
 	
 	return 0;
 }
+//for a better solution we can use Hashing.use array elements as 
+//key and their counts ans value. Create empty hash table and one
+// by one traverse in given array elements and store count
+//The time complexity of it is O(n),but require extra space
+
+
+//function to find element
+int getodd(int a[],int n)
+{
+	//define hash
+	unordered_map<int,int> hash;
+	
+	//put all elements into hashmap
+	for(int i=0;i<n; i++)
+	{
+		hash[a[i]]++;
+	}
+	//now iterate through hashmap too check element occuring odd no of times and return it
+	
+	for(auto i : hash)
+	{
+		if(i.second % 2 != 0)
+		{
+			return i.first;
+		}
+	}
+	return -1;
+}
+
+int main()
+{
+	int a[] = { 2, 3, 5, 4, 5, 2, 4, 
+                    3, 5, 2, 4, 4, 2 };  
+    int n = sizeof(a) / sizeof(a
+	[0]);  
+      
+    // Function calling  
+    cout << getodd(a, n);  
+  
+    return 0;
+}
