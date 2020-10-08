@@ -202,7 +202,84 @@ class singlylinkedlist{
 
 int main()
 {
-	
+	Singlylinkedlist s;
+	int option;
+	int key1, k1,data1;
+	do
+	{
+		cout<<"\n What operation do you want to perform? Select option. Enter 0 to exit"<<endl;
+		cout<<"\n 1. appendnode()"<<endl;
+		cout<<"\n 2. prependnode()"<<endl;
+		cout<<"\n 3. insertnodeafter()"<<endl;
+		cout<<"\n 4. deleteNodeKey()"<<endl;
+		cout<<"\n 5. updatNode()"<<endl;
+		cout<<"\n 6. printall()"<<endl;
+		cout<<"\n 7 ClearScreen()"<<endl;
+		
+		cin>>Option;
+		Node* n1 = new Node(); //here we are using dynamic memory allocation 
+		
+		switch(option);
+		{
+			case0:
+				break;
+			case1:
+				cout<<"Appened Node opreation \n Enter key and data of Node to be appended"<<endl;
+				cin>>key1;
+				cin>>data1;
+				n1->key=key1;
+				n1->data=data1;
+				s.appendnode(n1);
+				break;
+			case2:
+				cout<<"Prepend Node Operation \nEnter Key & data of Node to be prepended"<<endl;
+				cin>>key1;
+				cin>>data1;
+				n1->key1;
+				n1->data1;
+				s.prependNode(n1);
+				
+				break;
+				
+			case3:
+				cout<<"Insert Node After Operation \n Enter key of existing Node after which you want to Insert this New Node:"<<endl;
+				cin>>k1;
+				cout<<"Enter key & data of new Node first:"<<endl;
+				cin>>key1;
+				cin>>data1;
+				n1->key=key1;
+				n1->data=data1;
+				s.insertNode(k1, n1);
+				break;
+				
+			case4:
+				cout<<"Delete Node by key operation - \nEnter key of Node to be deleted:"<<endl;
+				cin>>k1;
+				s.deleteNodeByKey(key k1);
+				break;
+				
+			case5:
+				cout<<"Update Node by key operation - \nEnter key & NEW data to be updated"<<endl;
+				cin>>key1;
+				cin>>data1;
+				s.updateNode(key1,data1);
+				break;
+				
+			case6:
+				s.printlist();
+			case7:
+				system("cls");
+				break;
+			default:
+				cout<<"Enter proper option number"<<endl;
+				
+				
+		}
+		
+		while(option!=0);
+		
+		return 0;
+	}
 }
 
 
